@@ -26,5 +26,18 @@ class TddApplicationTests {
 	        assertEquals(0, evaluator.evaluate(hand));
 	    }
 	 
+	 @Test
+	 void shouldReturn30PointsForThreeOfAKind() {
+	     Hand hand = new Hand(List.of(
+	         new Card(7, Suite.TREFLE),
+	         new Card(7, Suite.CARREAU),
+	         new Card(7, Suite.COEUR),
+	         new Card(10, Suite.PIQUE),
+	         new Card(13, Suite.TREFLE)
+	     ));
+
+	     assertEquals(30, evaluator.evaluate(hand));
+	 }
+	 
 
 }
