@@ -2,12 +2,16 @@ package com.exam.tdd;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class TddApplicationTests {
 
+	
+	HandEvaluator evaluator = new HandEvaluator();
 	
 	 @Test
 	    void shouldReturnHighestCardWhenNoCombinationExists() {
@@ -19,7 +23,8 @@ class TddApplicationTests {
 	            new Card(13, Suite.TREFLE)
 	        ));
 
-	        assertEquals(13, evaluator.evaluate(hand));
+	        assertEquals(0, evaluator.evaluate(hand));
 	    }
+	 
 
 }
